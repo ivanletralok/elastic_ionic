@@ -1,0 +1,7 @@
+{
+  "name": "santaMarket",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
