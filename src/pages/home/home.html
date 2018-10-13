@@ -1,14 +1,17 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      elastic
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-item>
+    <ion-label fixed></ion-label>
+    <ion-input [(ngModel)]="valor" type="text" value=""></ion-input>
+  </ion-item>
+  <button (click)="agregarFrutas()" ion-button>ADD</button>
+
+  <button (click)="agregarFrutas()" ion-button>ADD2</button>
 </ion-content>
