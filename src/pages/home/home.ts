@@ -1,9 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NavController } from 'ionic-angular';
-
-import * as elasticsearch from 'elasticsearch';
-import esb from 'elastic-builder';
-import bodybuilder from 'bodybuilder';
 
 import elastic from './elastic.js';
 
@@ -12,16 +8,28 @@ import elastic from './elastic.js';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  title;content;
+  id;
   constructor(public navCtrl: NavController) {
     console.log(elastic);
     //console.log(this.requestBody.toJSON());
   }
 
-  agregarFrutas() {
-    elastic.search("*").then(function (results) {
-      console.log(results);
+  buscar(){
+    elastic.search(this.title).then(function (results) {
+      console.log(results.hits);
     });
+    this.title = "";
   }
+
+  eliminar(){
+    elastic.deleteDocument(this.id).then( function( result ){
+      console.log(result);
+    });
+    this.id = "";
+  }
+
+
 
 
   // requestBody = new esb.RequestBodySearch().query(

@@ -9,9 +9,15 @@
 <ion-content padding>
   <ion-item>
     <ion-label fixed></ion-label>
-    <ion-input [(ngModel)]="valor" type="text" value=""></ion-input>
+    <ion-input [(ngModel)]="title" type="text" value="" placeholder="Buscar-title"></ion-input>
   </ion-item>
-  <button (click)="agregarFrutas()" ion-button>ADD</button>
 
-  <button (click)="agregarFrutas()" ion-button>ADD2</button>
+  <ion-item>
+    <ion-label fixed></ion-label>
+    <ion-input [(ngModel)]="id" type="text" value="" placeholder="Eliminar-id"></ion-input>
+  </ion-item>
+  
+  <button (click)="buscar()" ion-button>Buscar</button>
+  <button (click)="eliminar()" ion-button>Eliminar</button>
+
 </ion-content>
