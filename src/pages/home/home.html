@@ -16,8 +16,19 @@
     <ion-label fixed></ion-label>
     <ion-input [(ngModel)]="id" type="text" value="" placeholder="Eliminar-id"></ion-input>
   </ion-item>
+
+  <ion-item>
+    <ion-label fixed></ion-label>
+    <ion-input [(ngModel)]="fruta" type="text" value="" placeholder="Fruta"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed></ion-label>
+    <ion-input [(ngModel)]="descripcion" type="text" value="" placeholder="Descripcion"></ion-input>
+  </ion-item>
   
   <button (click)="buscar()" ion-button>Buscar</button>
   <button (click)="eliminar()" ion-button>Eliminar</button>
+  <button (click)="agregar()" ion-button>Agregar</button>
 
 </ion-content>

@@ -63,10 +63,10 @@ function initMapping()
 		type: "document",
 		body:{
 			properties: {
-				titulo: {
+				frutas: {
 					type: "text"
 				},
-				contenido:{
+				descripcion:{
 					type: "text"
 				}
 			}
@@ -86,8 +86,8 @@ function addDocument( document )
 		index: indexName,
 		type: "document",
 		body:{
-			title: document.titulo,
-			content: document.contenido,
+			frutas: document.frutas,
+			descripcion: document.descripcion,
 		}
 	});
 }
