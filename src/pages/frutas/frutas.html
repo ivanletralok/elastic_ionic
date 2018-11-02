@@ -14,11 +14,14 @@
 
 
 <ion-content padding>
+
   <ion-item>
     <ion-label fixed></ion-label>
-    <ion-input [(ngModel)]="title" type="text" value="" placeholder="Buscar-Fruta"></ion-input>
+    <ion-input [(ngModel)]="buscarF" type="text" value="" placeholder="Buscar-Fruta"></ion-input>
   </ion-item>
-  <button ion-button color="primary" full>Buscar</button>
+
+  <button ion-button (click)="buscar()" color="primary" full>Buscar</button>
+
   <ion-list>
     <ion-item text-wrap *ngFor="let item of result">
       <ion-card>
